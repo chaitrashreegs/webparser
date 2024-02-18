@@ -37,10 +37,12 @@ go build -o webparser cmd/main.go
 ./webparser --address <address> --port <port> --file-path <file-path> --window-size <window-size> --precision <precision>
 ```
 
-Replace <address> with the IP address on which the web server runs, <port> with
-the port number, <file-path> with the path to store the counter data file,
-<window-size> with the duration of the time window for counting requests, and
-<precision> with the precision level for calculating the window index.
+Replace:
+- `address` with the IP address on which the web server runs,
+- `port` with the port number,
+- `file-path` with the path to store the counter data file,
+- `window-size`with the duration of the time window for counting requests, and
+- `precision` with the precision level for calculating the window index.
 
 4. Send requests to the web server to count them.
 
@@ -51,14 +53,14 @@ Total requests in the last 60 seconds: 1
 
 5. Configuration Options
 
-`address`: IP address on which the web server runs (default: 0.0.0.0)
-`port`: Port number on which the web server runs (default: 8090)
-`file-path`: Path to store the counter data file (default: ./counter.gob)
-`window-size`: Duration of the time window for counting requests (default: 60 seconds)
-`precision`: Precision level for calculating the window index (default: 1 second)
+- `address`: IP address on which the web server runs (default: 0.0.0.0)
+- `port`: Port number on which the web server runs (default: 8090)
+- `file-path`: Path to store the counter data file (default: ./counter.gob)
+- `window-size`: Duration of the time window for counting requests (default: 60 seconds)
+- `precision`: Precision level for calculating the window index (default: 1 second)
 
-6. TODO/Enhamncement
+6. TODO/Enhancements
 
-- Dynamic buffer size calculation
+- Dynamic buffer size allocation
 - Support HTTPS server
-- Add middleware's for logging and Recovery
+- Add middlewares for logging and recovery
